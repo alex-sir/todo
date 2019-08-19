@@ -1,26 +1,64 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import Nav from './Nav/Nav';
+import TodoList from './TodoList/TodoList';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            todos: []
+        };
+    }
+
+    addition = todo => {
+        this.setState({
+            todos: [...this.state.todos, todo]
+        });
+    }
+
+    remove = index => {
+        const currentTodos = [...this.state.todos];
+        currentTodos.splice(index, 1)
+
+        this.setState({
+            todos: currentTodos
+        });
+    }
+
+    nameModification = (todoName, index) => {
+        const currentTodos = [...this.state.todos];
+
+        currentTodos[index].name = todoName;
+        this.setState({
+            todos: currentTodos
+        });
+    }
+
+    descriptionModification = (todoDescription, index) => {
+        const currentTodos = [...this.state.todos];
+
+        currentTodos[index].description = todoDescription;
+        this.setState({
+            todos: currentTodos
+        });
+    }
+
+    render() {
+        const { todos } = this.state;
+
+        return (
+            <div>
+                <Nav addition={this.addition} />
+                <TodoList
+                    todos={todos}
+                    nameModification={this.nameModification}
+                    descriptionModification={this.descriptionModification}
+                    remove={this.remove}
+                />
+            </div>
+        );
+    }
 }
 
 export default App;

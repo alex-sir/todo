@@ -2,10 +2,12 @@
   "name": "todo",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://alex-sir.github.io/todo",
   "dependencies": {
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1"
+    "react-scripts": "3.1.1",
+    "sanitize.css": "^11.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

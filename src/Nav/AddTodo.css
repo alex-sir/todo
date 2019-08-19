@@ -1,0 +1,9 @@
+.nav-icon {
+    font-size: 3.5em;
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+#add-todo {
+    cursor: pointer;
+}

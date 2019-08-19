@@ -1,0 +1,18 @@
+.no-todos {
+    font-size: 1.6em;
+}
+
+.todo {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5em;
+}
+
+.todo-name {
+    display: flex;
+    align-items: center;
+}
+
+.todo-name * {
+    padding: 10px;
+}
