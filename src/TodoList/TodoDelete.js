@@ -1,6 +1,7 @@
 import React from 'react';
+import './TodoDelete.css';
 
-const DeleteTodo = props => {
+const TodoDelete = props => {
     return (
         <button
             className="delete-todo"
@@ -9,4 +10,4 @@ const DeleteTodo = props => {
     );
 }
 
-export default DeleteTodo;
+export default TodoDelete;

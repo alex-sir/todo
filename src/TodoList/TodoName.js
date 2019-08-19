@@ -1,4 +1,5 @@
 import React from 'react';
+import './TodoName.css';
 
 const TodoName = props => {
     const changeTodoName = event => {
@@ -7,6 +8,7 @@ const TodoName = props => {
     
     return (
         <input
+            className="todo-name-input"
             type="text"
             placeholder="Todo Name"
             value={props.todoValueName}

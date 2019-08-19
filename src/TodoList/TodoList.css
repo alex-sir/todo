@@ -6,6 +6,11 @@
     display: flex;
     flex-direction: column;
     font-size: 1.5em;
+    border-bottom: 1px solid #202020;
+}
+
+.todo:not(:first-of-type) {
+    margin-top: 30px;
 }
 
 .todo-name {
@@ -13,6 +18,10 @@
     align-items: center;
 }
 
-.todo-name * {
-    padding: 10px;
+.pretty .state label:before {
+    border-color: #202020 !important;
+}
+
+details {
+    margin: 5px 0 20px 45px;
 }

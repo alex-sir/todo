@@ -1,6 +1,6 @@
 import React from 'react';
 import TodoName from './TodoName';
-import DeleteTodo from './DeleteTodo';
+import TodoDelete from './TodoDelete';
 import TodoDescription from './TodoDescription';
 import './TodoList.css';
 
@@ -12,13 +12,18 @@ const TodoList = props => {
             return (
                 <div className="todo" key={index} data-key={index}>
                     <div className="todo-name">
-                        <input type="checkbox" />
+                        <div className="pretty p-default p-curve">
+                            <input type="checkbox" />
+                            <div className="state p-primary">
+                                <label></label>
+                            </div>
+                        </div>
                         <TodoName
                             index={index}
                             todoValueName={todo.name}
                             nameModification={props.nameModification}
                         />
-                        <DeleteTodo
+                        <TodoDelete
                             index={index}
                             remove={props.remove}
                         />

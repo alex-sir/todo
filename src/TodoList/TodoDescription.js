@@ -1,4 +1,5 @@
 import React from 'react';
+import './TodoDescription.css';
 
 const TodoDescription = props => {
     const changeTodoDescription = event => {
@@ -6,7 +7,10 @@ const TodoDescription = props => {
     }
 
     return (
-        <input
+        <textarea
+            className="todo-description"
+            rows="5"
+            cols="27"
             type="text"
             placeholder="Todo Description"
             value={props.todoValueDescription}
