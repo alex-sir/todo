@@ -1,8 +1,9 @@
-button {
+.delete-todo {
     font-size: 1.3em;
-    color: #ff2525;
+    color: #dc3545;
     font-weight: bold;
     background: transparent;
     border: none;
     cursor: pointer;
+    user-select: none;
 }

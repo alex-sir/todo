@@ -19,7 +19,8 @@ class App extends Component {
 
     remove = index => {
         const currentTodos = [...this.state.todos];
-        currentTodos.splice(index, 1)
+
+        currentTodos.splice(index, 1);
 
         this.setState({
             todos: currentTodos
@@ -44,6 +45,15 @@ class App extends Component {
         });
     }
 
+    updateChecked = index => {
+        const currentTodos = [...this.state.todos];
+
+        currentTodos[index].checked = !currentTodos[index].checked;
+        this.setState({
+            todos: currentTodos
+        });
+    }
+
     render() {
         const { todos } = this.state;
 
@@ -52,6 +62,7 @@ class App extends Component {
                 <Nav addition={this.addition} />
                 <TodoList
                     todos={todos}
+                    updateChecked={this.updateChecked}
                     nameModification={this.nameModification}
                     descriptionModification={this.descriptionModification}
                     remove={this.remove}

@@ -9,8 +9,6 @@ const TodoDescription = props => {
     return (
         <textarea
             className="todo-description"
-            rows="5"
-            cols="27"
             type="text"
             placeholder="Todo Description"
             value={props.todoValueDescription}

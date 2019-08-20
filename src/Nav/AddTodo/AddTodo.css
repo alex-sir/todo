@@ -6,4 +6,5 @@
 
 #add-todo {
     cursor: pointer;
+    user-select: none;
 }

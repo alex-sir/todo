@@ -1,5 +1,6 @@
 .no-todos {
     font-size: 1.6em;
+    margin: 0 0 0 5px;
 }
 
 .todo {
@@ -18,10 +19,11 @@
     align-items: center;
 }
 
-.pretty .state label:before {
-    border-color: #202020 !important;
-}
-
 details {
     margin: 5px 0 20px 45px;
+}
+
+.description-title {
+    user-select: none;
+    max-width: 250px;
 }

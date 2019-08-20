@@ -1,12 +1,14 @@
 {
   "name": "todo",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "homepage": "http://alex-sir.github.io/todo",
   "dependencies": {
+    "@material-ui/core": "^4.3.2",
     "pretty-checkbox": "^3.0.3",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-icons": "^3.7.0",
     "react-scripts": "3.1.1",
     "sanitize.css": "^11.0.0"
   },

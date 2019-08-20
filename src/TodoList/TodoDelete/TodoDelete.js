@@ -1,12 +1,13 @@
 import React from 'react';
+import { TiDeleteOutline } from "react-icons/ti";
 import './TodoDelete.css';
 
 const TodoDelete = props => {
     return (
-        <button
+        <TiDeleteOutline
             className="delete-todo"
             onClick={() => props.remove(props.index)}
-        >X</button>
+        />
     );
 }
 

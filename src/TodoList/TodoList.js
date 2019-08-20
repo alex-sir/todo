@@ -1,23 +1,23 @@
 import React from 'react';
-import TodoName from './TodoName';
-import TodoDelete from './TodoDelete';
-import TodoDescription from './TodoDescription';
+import TodoName from './TodoName/TodoName';
+import TodoDelete from './TodoDelete/TodoDelete';
+import TodoDescription from './TodoDescription/TodoDescription';
+import TodoCheckbox from './TodoCheckbox/TodoCheckbox';
 import './TodoList.css';
 
 const TodoList = props => {
     if (props.todos.length === 0) {
-        return <p className="no-todos">No todos. Add a todo with '+'.</p>
+        return <p className="no-todos">No todos. Add a todo with <strong>+</strong>.</p>
     } else {
         const todos = props.todos.map((todo, index) => {
             return (
-                <div className="todo" key={index} data-key={index}>
+                <div className="todo" key={index}>
                     <div className="todo-name">
-                        <div className="pretty p-default p-curve">
-                            <input type="checkbox" />
-                            <div className="state p-primary">
-                                <label></label>
-                            </div>
-                        </div>
+                        <TodoCheckbox
+                            index={index}
+                            updateChecked={props.updateChecked}
+                            isChecked={todo.checked}
+                        />
                         <TodoName
                             index={index}
                             todoValueName={todo.name}
@@ -29,7 +29,7 @@ const TodoList = props => {
                         />
                     </div>
                     <details>
-                        <summary>Description</summary>
+                        <summary className="description-title">Description</summary>
                         <TodoDescription
                             index={index}
                             todoValueDescription={todo.description}
