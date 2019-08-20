@@ -1,10 +1,10 @@
 import React from 'react';
-import { TiDeleteOutline } from "react-icons/ti";
+import { FaTrash } from "react-icons/fa";
 import './TodoDelete.css';
 
 const TodoDelete = props => {
     return (
-        <TiDeleteOutline
+        <FaTrash
             className="delete-todo"
             onClick={() => props.remove(props.index)}
         />

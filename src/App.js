@@ -58,7 +58,7 @@ class App extends Component {
         const { todos } = this.state;
 
         return (
-            <div>
+            <div id="app">
                 <Nav addition={this.addition} />
                 <TodoList
                     todos={todos}
