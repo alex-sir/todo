@@ -4,3 +4,10 @@ body {
     background: -webkit-linear-gradient(to right, #8DC26F, #76b852);
     background: linear-gradient(to right, #8DC26F, #76b852);
 }
+
+@media only screen and (min-width: 960px) {
+    html {
+        margin-left: calc(100vw - 100%);
+        margin-right: 0;
+    }
+}

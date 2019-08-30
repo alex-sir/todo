@@ -6,4 +6,9 @@
     border: none;
     cursor: pointer;
     user-select: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.delete-todo:hover {
+    color: #b52e31;
 }
