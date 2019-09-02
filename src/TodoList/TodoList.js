@@ -11,7 +11,7 @@ const TodoList = props => {
     } else {
         const todos = props.todos.map((todo, index) => {
             return (
-                <div className="todo" key={index}>
+                <div className="todo" key={todo.id}>
                     <div className="todo-name">
                         <TodoCheckbox
                             index={index}
