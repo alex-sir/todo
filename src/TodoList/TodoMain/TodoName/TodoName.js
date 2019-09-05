@@ -8,7 +8,7 @@ const TodoName = props => {
     
     return (
         <input
-            className="todo-name-input"
+            className={`todo-name-input ${props.isChecked ? "checked" : null}`}
             type="text"
             placeholder="Todo Name"
             value={props.todoValueName}

@@ -14,11 +14,6 @@
     margin-top: 30px;
 }
 
-.todo-name {
-    display: flex;
-    align-items: center;
-}
-
 details {
     margin: 5px 0 20px 45px;
 }

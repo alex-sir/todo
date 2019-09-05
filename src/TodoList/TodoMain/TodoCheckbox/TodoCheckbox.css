@@ -1,3 +1,7 @@
 .pretty .state label:before {
     border-color: #202020 !important;
 }
+
+.pretty {
+    margin-right: 0.59em;
+}

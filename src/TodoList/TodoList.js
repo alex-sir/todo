@@ -1,9 +1,7 @@
 import React from 'react';
-import TodoName from './TodoName/TodoName';
-import TodoDelete from './TodoDelete/TodoDelete';
+import TodoMain from './TodoMain/TodoMain';
 import TodoDescription from './TodoDescription/TodoDescription';
-import TodoCheckbox from './TodoCheckbox/TodoCheckbox';
-import './TodoList.css';
+import './TodoList.css';    
 
 const TodoList = props => {
     if (props.todos.length === 0) {
@@ -12,23 +10,15 @@ const TodoList = props => {
         const todos = props.todos.map((todo, index) => {
             return (
                 <div className="todo" key={todo.id}>
-                    <div className="todo-name">
-                        <TodoCheckbox
-                            index={index}
-                            updateChecked={props.updateChecked}
-                            isChecked={todo.checked}
-                        />
-                        <TodoName
-                            index={index}
-                            todoValueName={todo.name}
-                            nameModification={props.nameModification}
-                        />
-                        <TodoDelete
-                            index={index}
-                            remove={props.remove}
-                        />
-                    </div>
-                    <details>
+                    <TodoMain
+                        index={index}
+                        todo={todo}
+                        updateChecked={props.updateChecked}
+                        nameModification={props.nameModification}
+                        nameChecked={props.updateChecked}
+                        remove={props.remove}
+                    />
+                    <details className={`${todo.checked ? "checked" : null}`}>
                         <summary className="description-title">Description</summary>
                         <TodoDescription
                             index={index}
